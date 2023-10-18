@@ -1,0 +1,166 @@
+Exercício 1
+using static System.Console;
+int n1, n2;
+WriteLine("Digite um Número: ");
+n1 = Convert.ToInt32(Console.ReadLine());
+WriteLine("Digite o segundo número: ");
+n2 = Convert.ToInt32(Console.ReadLine());
+if (n1 > n2)
+{
+	WriteLine($"O número {n1} é maior que {n2}");
+}
+else
+{
+	WriteLine($"O número {n1} é menor que {n2}");
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Exercício 2
+using static System.Console;
+int n1, n2, n3;
+WriteLine("Digite o primeiro número:");
+n1 = Convert.ToInt32(Console.ReadLine());
+WriteLine("Digite o segundo número:");
+n2 = Convert.ToInt32(Console.ReadLine());
+WriteLine("Digite o terceiro número:");
+n3 = Convert.ToInt32(Console.ReadLine());
+if (n1 > n2 && n1 > n3 && n2 > n3)
+{
+	WriteLine($"{n1} é o maior e o menor é {n3}");
+}
+else if  (n2 > n1 && n2 > n3 && n1 > n3)
+{
+	WriteLine($"{n2} é o maior e o menor é {n3} ");
+}
+if (n3 > n1 && n3 > n2 && n2 > n1)
+{
+	WriteLine($"{n3} é o maior e o menor é {n1}");
+}
+else if (n2 > n1 && n2 > n3 && n1 < n3)
+{
+	WriteLine($"{n2} é o maior e o menor é {n1}");
+}
+if (n1 > n2 && n1 > n3 && n2 < n3)
+{
+	WriteLine($"{n1} é o maior e o menor é {n2}");
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Exercício 3
+using static System.Console;
+decimal n1, n2, media;
+WriteLine("Digite a primeira nota:");
+n1 = Convert.ToDecimal(ReadLine());
+WriteLine("Digite a segunda nota:");
+n2 = Convert.ToDecimal(ReadLine());
+media = n1 + n2;
+if  (media == 10)
+{
+	ForegroundColor = ConsoleColor.DarkGreen;
+	WriteLine("Aprovado com disntição!!!!");
+}
+else if (media >= 7)
+{
+	ForegroundColor = ConsoleColor.DarkCyan;
+	WriteLine("APROVADO");
+}
+if (media < 7)
+{
+	ForegroundColor = ConsoleColor.DarkRed;
+	WriteLine("REPROVADO");
+}
+ReadKey();
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Exercício 4
+using static System.Console;
+decimal p1, p2, p3;
+WriteLine("Digite o valor do primeiro produto");
+p1 = Convert.ToDecimal(ReadLine());
+WriteLine("Digite o valor do segundo produto");
+p2 = Convert.ToDecimal(ReadLine());
+WriteLine("Digite o valor do terceiro produto");
+p3 = Convert.ToDecimal(ReadLine());
+if (p1 < p2 && p1 < p3)
+{
+	WriteLine("O produto de número 1 é mais barato");
+}
+else if (p2 < p1 && p2 < p3)
+{
+	WriteLine("O produto de número 2 é mais barato");
+}
+if (p3 < p1 && p3 < p2)
+{
+	WriteLine("O produto de número 3 é mais barato");
+}
+ReadKey();
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Exercício 5
+using static System.Console;
+int n1;
+WriteLine("Digite um número");
+n1 = Convert.ToInt32(Console.ReadLine());
+if (n1 %2 == 0)
+{
+	WriteLine($"o número {n1} é par");
+}
+else
+{
+	WriteLine($"O número {n1} é impar");
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Exercício 6
+using static System.Console;
+int idade;
+WriteLine("Idade:");
+idade = Convert.ToInt32(Console.ReadLine());
+if (idade >= 18 && idade<= 67)
+{
+	WriteLine("Aprovado como doador");
+}
+else
+{
+	WriteLine("Negado como doador");
+}
+ReadKey();
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Exercicio 7
+using static System.Console;
+int a = 10;
+int b = 20;
+int c;
+c = a;
+a = b;
+b = c;
+WriteLine($"{a} e {b}");
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Exercício 8
+using static System.Console;
+decimal salariofixo, comissao, valortotal, numerovendas, salariobruto, bonus;
+WriteLine("Salario: ");
+salariofixo = Convert.ToDecimal(ReadLine());
+WriteLine("Número de vendas: ");
+numerovendas = Convert.ToDecimal(ReadLine());
+WriteLine("Valor total das vendas: ");
+valortotal = Convert.ToDecimal(ReadLine());
+WriteLine("Comissão: ");
+comissao = Convert.ToDecimal(ReadLine());
+comissao = comissao * numerovendas;
+bonus = valortotal * 5 / 100;
+salariobruto = comissao + bonus + salariofixo;
+WriteLine($"Salario total: {salariobruto}");
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Exercício 9
+using static System.Console;
+decimal tf, tc;
+WriteLine("Temperatura em Fahrenheit");
+tf = Convert.ToDecimal(ReadLine());
+tc = (tf - 32) * 5 / 9;
+WriteLine($"Temperatura em Celsius: {tc}");
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Exercício 10
+using static System.Console;
+decimal m, km;
+WriteLine("Digite a velocidade em M/S:");
+m = Convert.ToDecimal(ReadLine());
+km = m * 36 / 10;
+WriteLine($"Velocidade em KM: {km}");
+ReadKey();
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
