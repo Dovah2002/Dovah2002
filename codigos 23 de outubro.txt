@@ -1,0 +1,91 @@
+using static System.Console;
+string[] nomes = { "Pedro", "Maria", "Emer", "Beatriz",};
+WriteLine();
+WriteLine("O tamanho do array é : " + nomes.Length);
+WriteLine();
+Array.Sort(nomes);
+WriteLine("Os Nomes são: ");
+foreach (string nome in nomes)
+{
+	WriteLine(nome);
+}
+WriteLine();
+string novonome = "Kassandra"; 
+List<string> novons = new List<string>(nomes.ToList());
+novons.Add(novonome);
+nomes = novons.ToArray();
+WriteLine("O tamanho do array é: "+ nomes.Length);
+WriteLine();
+Array.Sort(nomes);
+WriteLine("Os nomes são:");
+foreach (string n in nomes)
+{
+	WriteLine(n);
+}
+ReadKey();
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+using static System.Console;
+ForegroundColor = ConsoleColor.DarkGreen;
+int n1, n2, n3, n4, n5;
+WriteLine("Digite 5 números: ");
+n1 = Convert.ToInt32(ReadLine());
+n2 = Convert.ToInt32(ReadLine());
+n3 = Convert.ToInt32(ReadLine());
+n4 = Convert.ToInt32(ReadLine());
+n5 = Convert.ToInt32(ReadLine());
+WriteLine();
+int[] numeros= {n1, n2, n3, n4, n5};
+WriteLine("Seus números:");
+foreach (int n in numeros)
+{
+	WriteLine(n);	
+}
+ReadKey();
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+using static System.Console;
+int[] numeros = new int[5];
+WriteLine("Digite 5 números inteiros...");
+WriteLine("Pressione ENTER a cada número digitado...");
+for (int i = 0; i < numeros.Length; i++)
+{
+	numeros[i] = Convert.ToInt32(ReadLine());
+}
+Clear();
+WriteLine("Os números digitados são...");
+for (int n = 0; n < numeros.Length; n++)
+{
+	WriteLine(numeros[n]);
+}
+ReadKey();
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+using static System.Console;
+int[] numeros = new int[10];
+WriteLine("Digite 10 números maior que zero:");
+WriteLine("Aperte ENTER a cada um");
+for (int i = 0; i < numeros.Length; i++)
+{
+	numeros[i] = Convert.ToInt32(Console.ReadLine());
+}
+Clear();
+WriteLine("Números pares: ");
+for (int i = 0;i < numeros.Length; i++)
+{
+	if (numeros[i] %2 == 0)
+	{
+		WriteLine(numeros[i]);	
+	}
+}
+WriteLine("Números impares: ");
+for (int i = 0;i < numeros.Length; i++)
+{
+	if (numeros[i] %2 != 0)
+	{
+		WriteLine(numeros[i]);
+	}
+}
+WriteLine("Números digitados:");
+for (int i = 0;i <numeros.Length; i++)
+{
+	WriteLine(numeros[i]);
+}
+ReadKey();	
