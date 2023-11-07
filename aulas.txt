@@ -1,0 +1,54 @@
+
+Exercicíos
+]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+(((1)))
+using static System.Console;
+ForegroundColor = ConsoleColor.Green;
+string[] nomes = new string[10];
+WriteLine("Digite 10 nomes:");
+WriteLine("Pressione ENTER a cada nome digitado.");
+for (int i = 0; i < nomes.Length; i++)
+{
+    nomes[i] = ReadLine();
+}
+List<string> names = new List<string>(nomes);
+WriteLine();
+foreach (string name in names)
+{
+      WriteLine(name);
+}
+WriteLine($"Primeiro nome digitado: {names[0]}");
+WriteLine();
+WriteLine($"Ultimo nome digitado: {names[9]}");
+ReadKey();
+//////////////////////////////////////////
+(((2)))
+using System.Net.Http.Headers;
+using static System.Console;
+List<string> alunos = new List<string>();
+List<double> notas = new List<double>();
+for (int i = 0; i <10; i++)
+{
+    WriteLine($"Digite o {i + 1} nome do aluno");
+    alunos.Add(ReadLine());
+    WriteLine($"Digite a nota do aluno");
+    notas.Add(Convert.ToDouble(ReadLine()));
+}
+Clear();
+WriteLine("((( LISTA )))");
+double soma = 0;
+double media = 0;
+foreach (double s in notas)
+{
+    soma += s;
+}
+media = soma / 5;
+WriteLine("((( A média dos alunos foi:" + media.ToString("f"));
+WriteLine();
+int posicao = 0;
+foreach (string aluno in alunos)
+{
+    WriteLine($"Aluno {posicao + 1}: {aluno} - Nota: {notas[posicao]}");
+    posicao++;
+}
+ReadKey();
